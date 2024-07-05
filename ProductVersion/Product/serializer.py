@@ -4,6 +4,7 @@ from rest_framework.serializers import ModelSerializer
 from .models import Version, Product
 
 
+# Api for VersionChoise
 class VersionSerializer(ModelSerializer):
     product = StringRelatedField(read_only=True)
 
@@ -20,7 +21,7 @@ class ProductSerializer(ModelSerializer):
         model = Product
         fields = ['title', 'description', 'versions']
 
-
+# Api for ProductChoise
 # class ProductSerializer(ModelSerializer):
 #     versions = StringRelatedField(many=True, read_only=True)
 #

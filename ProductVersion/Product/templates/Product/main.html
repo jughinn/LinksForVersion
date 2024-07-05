@@ -1,0 +1,23 @@
+{% extends 'Product/base.html' %}
+
+{% block title %}
+    Главная страница
+{% endblock %}
+
+{% block content %}
+    <h1>Products and Versions</h1>
+   {% for el in versions %}
+        <div class="alert alert-warning">
+            Product: {{ el.product }}<br>
+            Version: {{ el.version }}<br>
+            Linux Portable: {{ el.lin_port_link }}<br>
+            Linux RPM: {{ el.lin_rpm_link }}<br>
+            Windows Exe: {{ el.win_exe_link}}<br>
+            Windows Msi: {{ el.win_msi_link}}<br>
+            MacOS: {{ el.mac_os_link}}
+        </div>
+    {% endfor %}
+    </p>
+{% endblock %}
+
+

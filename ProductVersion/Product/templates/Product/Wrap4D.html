@@ -1,0 +1,21 @@
+{% extends 'Product/base.html' %}
+
+{% block title %}
+    Cтраница Wrap4D
+{% endblock %}
+
+{% block content %}
+    <h1>Wrap4D</h1>
+    <p> Product and Version:</p>
+    {% for el in versions %}
+        <div class="alert alert-warning">
+            Product: {{ el.product }}<br>
+            Version: {{ el.version }}<br>
+            Linux Portable: {{ el.lin_port_link }}<br>
+            Linux RPM: {{ el.lin_rpm_link }}<br>
+            Windows Exe: {{ el.win_exe_link}}<br>
+            Windows Msi: {{ el.win_msi_link}}<br>
+            MacOS: {{ el.mac_os_link}}
+        </div>
+    {% endfor %}
+{% endblock %}

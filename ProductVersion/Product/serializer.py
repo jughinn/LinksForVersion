@@ -1,7 +1,7 @@
 from rest_framework.relations import StringRelatedField
 from rest_framework.serializers import ModelSerializer
 
-from Product.models import Version, Product
+from .models import Version, Product
 
 
 class VersionSerializer(ModelSerializer):
@@ -9,8 +9,8 @@ class VersionSerializer(ModelSerializer):
 
     class Meta:
         model = Version
-        fields = ['product', 'version', 'lin_port_link', 'lin_rpm_link',
-                  'win_exe_link', 'win_msi_link', 'mac_os_link']
+        fields = ['product', 'version', 'linux_portable_link', 'linux_rpm_link',
+                  'windows_exe_link', 'windows_msi_link', 'mac_os_link']
 
 
 class ProductSerializer(ModelSerializer):
@@ -34,5 +34,5 @@ class ProductSerializer(ModelSerializer):
 #
 #     class Meta:
 #         model = Version
-#         fields = ['product', 'version', 'lin_port_link', 'lin_rpm_link',
-#                   'win_exe_link', 'win_msi_link', 'mac_os_link']
+#         fields = ['product', 'version', 'linux_portable_link', 'linux_rpm_link',
+#                   'windows_exe_link', 'windows_msi_link', 'mac_os_link']
